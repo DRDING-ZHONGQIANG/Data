@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo"Running"
+python3 run.py -s latest.avi --debug
