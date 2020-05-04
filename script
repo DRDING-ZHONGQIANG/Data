@@ -2,3 +2,11 @@
 
 echo"Running"
 python3 run.py -s latest.avi --debug
+
+# install openCv
+#  conda update anaconda-navigator 
+#  conda update navigator-updater
+#  pip install opencv-python 
+#
+#
+#
