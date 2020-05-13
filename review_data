@@ -56,7 +56,9 @@ class dist_plot:
      cIndex = 0
      fSpeed = 0 
      wtime =  dateutil.parser.parse(wtimeins)      
-     
+     now_timestamp = time.time()
+     offset = datetime.datetime.fromtimestamp(now_timestamp) - datetime.datetime.utcfromtimestamp(now_timestamp)
+     wtime =  wtime + offset
      rows = vdata.shape[0]        
      for i in range(rows):      
          timeins = vdata[i,0]
