@@ -87,12 +87,15 @@ class dist_plot:
       for i in range(rows):          
           element_list = wdata1[i]
           wtime = element_list[1]
+          wtime =  dateutil.parser.parse(wtime)  
+          wtime =  wtime + self.offset
           [cI, fd] = self.find_vValue(wtime, np.array(vdata))          
           y[i, 0] = element_list[0]
-          y[i, 1] = element_list[1]
+          wtime = wtime.replace(tzinfo=None)
+          y[i, 1] = wtime
           y[i, 2] = element_list[3]
           y[i, 3] = cI
-          y[i, 4] = fd           
+          y[i, 4] = fd                     
       return y
       
 if __name__ == '__main__':
