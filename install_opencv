@@ -1,0 +1,9 @@
+Download opencv-4.4.0 to ../installation/opencv-4.4.0/
+Create ../installation/opencv-4.4.0/build
+sudo apt install cmake-qt-gui
+sudo cmake-gui
+path of source codes: ../installation/opencv-4.4.0
+path of makefiles:    ../installation/opencv-4.4.0/build
+configure + Generate
+make -j7 # runs 7 jobs in parallel
+sudo make install
